@@ -38,7 +38,7 @@ end)
 createButton("TempButton", UDim2.new(0.1, 0, 0.4, 0), "Wood>Warm>Safe", function()
     if character and character:FindFirstChild("HumanoidRootPart") then
         -- Teleport to new position
-        character.HumanoidRootPart.CFrame = CFrame.new(-30.350303649902344, 4.199999809265137, -120.07998657226562)
+        character.HumanoidRootPart.CFrame = CFrame.new(-33.350303649902344, 4.199999809265137, -120.07998657226562)
         -- Wait 1 second and return
         task.wait(1)
          character.HumanoidRootPart.CFrame = CFrame.new(-44.103084564208984, 7.799975395202637, -60.186580657958984)
