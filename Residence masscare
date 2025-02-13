@@ -10,7 +10,7 @@ local frame = Instance.new("Frame", screenGui)
 frame.Size = UDim2.new(0.3, 0, 0.4, 0)
 frame.Position = UDim2.new(0.35, 0, 0.55, 0)
 frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-frame.BackgroundTransparency = 0.5
+frame.BackgroundTransparency = 0.2
 frame.BorderSizePixel = 0
 
 local function createButton(name, position, text, callback)
@@ -72,6 +72,6 @@ end)
 -- Button 4: Home
 createButton("HomeButton", UDim2.new(0.1, 0, 0.7, 0), "Home", function()
    if character and character:FindFirstChild("HumanoidRootPart") then
-       character.HumanoidRootPart.CFrame = CFrame.new(-30, 20, -70)
+       character.HumanoidRootPart.CFrame = CFrame.new(-30, 25, -70)
     end
 end)
