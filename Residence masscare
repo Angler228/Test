@@ -67,6 +67,8 @@ createButton("SafeSpotButton", UDim2.new(0.1, 0, 0.5, 0), "Safe spot", function(
         platform.Anchored = true
         platform.BrickColor = BrickColor.new("Cyan")
         platform.Parent = workspace
+    end
+end)
 -- Button 4: Home
 createButton("HomeButton", UDim2.new(0.1, 0, 0.7, 0), "Home", function()
    if character and character:FindFirstChild("HumanoidRootPart") then
