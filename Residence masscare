@@ -72,6 +72,6 @@ end)
 -- Button 4: Home
 createButton("HomeButton", UDim2.new(0.1, 0, 0.7, 0), "Home", function()
    if character and character:FindFirstChild("HumanoidRootPart") then
-       character.HumanoidRootPart.CFrame = CFrame.new(-30, 25, -70)
+       character.HumanoidRootPart.CFrame = CFrame.new(-30, 27, -70)
     end
 end)
