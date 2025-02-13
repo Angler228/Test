@@ -35,7 +35,7 @@ createButton("WarmButton", UDim2.new(0.1, 0, 0.1, 0), "Warm", function()
 end)
 
 -- Button 2: Temporary Teleport and Return
-createButton("TempButton", UDim2.new(0.1, 0, 0.4, 0), "Wood>Warm>Safe", function()
+createButton("TempButton", UDim2.new(0.1, 0, 0.3, 0), "Wood>Warm>Safe", function()
     if character and character:FindFirstChild("HumanoidRootPart") then
         -- Teleport to new position
         character.HumanoidRootPart.CFrame = CFrame.new(-33.350303649902344, 4.199999809265137, -120.07998657226562)
@@ -55,7 +55,7 @@ createButton("TempButton", UDim2.new(0.1, 0, 0.4, 0), "Wood>Warm>Safe", function
 end)
 
 -- Button 3: Safe Spot
-createButton("SafeSpotButton", UDim2.new(0.1, 0, 0.7, 0), "Safe House", function()
+createButton("SafeSpotButton", UDim2.new(0.1, 0, 0.5, 0), "Safe spot", function()
     if character and character:FindFirstChild("HumanoidRootPart") then
         -- Teleport to Safe Spot
         character.HumanoidRootPart.CFrame = CFrame.new(-72.2377700805664, 12.057212829589844, -120.10104370117188)
@@ -67,5 +67,9 @@ createButton("SafeSpotButton", UDim2.new(0.1, 0, 0.7, 0), "Safe House", function
         platform.Anchored = true
         platform.BrickColor = BrickColor.new("Cyan")
         platform.Parent = workspace
+-- Button 4: Home
+createButton("SafeSpotButton", UDim2.new(0.1, 0, 0.7, 0), "Home", function()
+if character and character:FindFirstChild("HumanoidRootPart") then
+character.HumanoidRootPart.CFrame = CFrame.new(-30, 20 -70)
     end
 end)
