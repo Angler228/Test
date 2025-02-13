@@ -1,0 +1,71 @@
+-- Mobile Teleportation Script with Buttons and Made by Hecker Label
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- GUI Setup
+local screenGui = Instance.new("ScreenGui", game.CoreGui)
+
+-- Buttons Frame
+local frame = Instance.new("Frame", screenGui)
+frame.Size = UDim2.new(0.3, 0, 0.4, 0)
+frame.Position = UDim2.new(0.35, 0, 0.55, 0)
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BackgroundTransparency = 0.5
+frame.BorderSizePixel = 0
+
+local function createButton(name, position, text, callback)
+    local button = Instance.new("TextButton", frame)
+    button.Size = UDim2.new(0.8, 0, 0.2, 0)
+    button.Position = position
+    button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+    button.BorderSizePixel = 0
+    button.TextColor3 = Color3.fromRGB(0, 255, 255)
+    button.TextScaled = true
+    button.Text = text
+    button.Font = Enum.Font.SourceSans
+    button.MouseButton1Click:Connect(callback)
+    return button
+end
+
+-- Button 1: Warm
+createButton("WarmButton", UDim2.new(0.1, 0, 0.1, 0), "Warm", function()
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        character.HumanoidRootPart.CFrame = CFrame.new(-44.103084564208984, 7.799975395202637, -59.186580657958984)
+    end
+end)
+
+-- Button 2: Temporary Teleport and Return
+createButton("TempButton", UDim2.new(0.1, 0, 0.4, 0), "Wood>Warm>Safe", function()
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        -- Teleport to new position
+        character.HumanoidRootPart.CFrame = CFrame.new(-30.350303649902344, 4.199999809265137, -120.07998657226562)
+        -- Wait 1 second and return
+        task.wait(1)
+         character.HumanoidRootPart.CFrame = CFrame.new(-44.103084564208984, 7.799975395202637, -60.186580657958984)
+        task.wait(1)
+        character.HumanoidRootPart.CFrame = CFrame.new(-10.103084564208984, 11.799975395202637,-45.186580657958984)
+         -- Create a platform under the safe spot
+        local platform = Instance.new("Part")
+        platform.Size = Vector3.new(20, 1, 20)
+        platform.Position = Vector3.new(-10.103084564208984, 11.799975395202637,-45.186580657958984)
+        platform.Anchored = true
+        platform.BrickColor = BrickColor.new("Cyan")
+        platform.Parent = workspace
+    end
+end)
+
+-- Button 3: Safe Spot
+createButton("SafeSpotButton", UDim2.new(0.1, 0, 0.7, 0), "Safe House", function()
+    if character and character:FindFirstChild("HumanoidRootPart") then
+        -- Teleport to Safe Spot
+        character.HumanoidRootPart.CFrame = CFrame.new(-10.103084564208984, 12.799975395202637,-45.186580657958984)
+
+        -- Create a platform under the safe spot
+        local platform = Instance.new("Part")
+        platform.Size = Vector3.new(15, 1, 15)
+        platform.Position = Vector3.new(-10.103084564208984, 11.799975395202637,-45.186580657958984)
+        platform.Anchored = true
+        platform.BrickColor = BrickColor.new("Cyan")
+        platform.Parent = workspace
+    end
+end)
