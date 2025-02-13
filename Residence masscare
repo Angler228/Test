@@ -44,10 +44,10 @@ createButton("TempButton", UDim2.new(0.1, 0, 0.4, 0), "Wood>Warm>Safe", function
          character.HumanoidRootPart.CFrame = CFrame.new(-44.103084564208984, 7.799975395202637, -60.186580657958984)
         task.wait(1)
         character.HumanoidRootPart.CFrame = CFrame.new(72.2377700805664, 12.057212829589844, -120.10104370117188)
-         -- Create a platform under the safe spot
+        -- Create a platform under the safe spot
         local platform = Instance.new("Part")
-        platform.Size = Vector3.new(20, 1, 20)
-        platform.Position = Vector3.new(72.2377700805664, 11.057212829589844, -120.10104370117188)
+        platform.Size = Vector3.new(15, 1, 15)
+        platform.Position = Vector3.new(-72.2377700805664, 11.057212829589844, -120.10104370117188)
         platform.Anchored = true
         platform.BrickColor = BrickColor.new("Cyan")
         platform.Parent = workspace
@@ -58,12 +58,12 @@ end)
 createButton("SafeSpotButton", UDim2.new(0.1, 0, 0.7, 0), "Safe House", function()
     if character and character:FindFirstChild("HumanoidRootPart") then
         -- Teleport to Safe Spot
-        character.HumanoidRootPart.CFrame = CFrame.new(72.2377700805664, 12.057212829589844, -120.10104370117188)
-
+        character.HumanoidRootPart.CFrame = CFrame.new(-72.2377700805664, 12.057212829589844, -120.10104370117188)
+ 
         -- Create a platform under the safe spot
         local platform = Instance.new("Part")
         platform.Size = Vector3.new(15, 1, 15)
-        platform.Position = Vector3.new(72.2377700805664, 11.057212829589844, -120.10104370117188)
+        platform.Position = Vector3.new(-72.2377700805664, 11.057212829589844, -120.10104370117188)
         platform.Anchored = true
         platform.BrickColor = BrickColor.new("Cyan")
         platform.Parent = workspace
